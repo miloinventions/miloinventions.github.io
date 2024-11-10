@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MiloCorp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav height="52px">
+      <img src="Inverted.png" alt="logo" class="logo" width="7.5%" height="52px" />
+      <a href="index.html">Home</a>
+      <a href="~">~</a>
+      <div height="100%" id="menu" onclick="drop()" onmouseover="hovered()" onmouseout="unhovered()"><svg id="nohover" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-120v-80h720v80H120Zm0-320v-80h720v80H120Zm0-320v-80h720v80H120Z" id="hover" style="display:none"/></svg></div>
+    </nav>
+  </header>
+  <div id="dropped" style="display:none">Drop test</div>
+  <h1>MiloCorp</h1>
+  <h2>About us</h2>
+  <p>
+  MiloCorp is a privately owned company by Milo Blackledge. We thrive on cheap services to assist others, including but not limited to cleaning, washing, gardening any many others.
+  </p>
+  <p>
+  To inquire about our services, please visit the services page or email contactmilocorp@gmail.com
+  </p>
+  <footer>
+    <p>&copy;<i>MiloCorp</i> 2024</p>
+  </footer>
+  <script>
+    function drop() {
+      if (document.getElementById("dropped").style.display == "none") {
+        document.getElementById("dropped").style.display = "block";
+      } else {
+        document.getElementById("dropped").style.display = "none";
+      }
+    }
+    function hovered() {
+      document.getElementById("nohover").style.display = "none";
+      document.getElementById("hover").style.display = "block";
+      document.getElementById("menu").style.height = "100%";
+    }
+    function unhovered() {
+      document.getElementById("nohover").style.display = "block";
+      document.getElementById("hover").style.display = "none";
+      document.getElementById("menu").style.height = "100%";
+    }
+  </script>
+</body>
+</html>
